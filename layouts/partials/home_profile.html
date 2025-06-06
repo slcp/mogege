@@ -2,7 +2,7 @@
     {{ with .Site.Params.avatar}}
     {{ $avatar := .}}
     <div class="avatar">
-    <a href="{{ (printf "%s" $.Site.Params.avatar_target }}"> <img src="{{ (printf "%s" $avatar)}}"> </a>
+    <a href="{{ (printf "%s" $.Site.Params.avatar_target) }}"> <img src="{{ (printf "%s" $avatar)}}"> </a>
     </div>
     {{ end }}
     {{ with .Site.Params.subtitle}}
