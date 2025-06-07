@@ -16,6 +16,13 @@
     <div class="social-links">
         {{ partial "social.html" . }}
     </div>
+    {{ with .Site.Params.buttons.items }}
+    <div class="button-group">
+        {{ range . }}
+        <a href="{{ .url | relURL }}" class="ghost-button">{{ .label }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
 </div>
 
 {{ if .IsHome }}
